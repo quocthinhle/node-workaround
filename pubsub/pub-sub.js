@@ -4,9 +4,14 @@ class PubSub {
     constructor() {
         this.publisher = getRedisConnection();
         this.subscriber = getRedisConnection();
-        this.subscriber.connect();
-        this.publisher.connect();
         this.eventHandler = {};
+    }
+
+    async init() {
+        await Promise.all([
+            this.subscriber.connect(),
+            this.publisher.connect(),
+        ]);
     }
 
     publish(event, data) {
@@ -15,6 +20,7 @@ class PubSub {
                 data = JSON.stringify(data);
             }
 
+            // TODO: Refactor this one
             this.publisher.publish(event, data, (error) => {
                 if (error) {
                     return reject('ERROR_PUBLISHING');
