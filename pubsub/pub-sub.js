@@ -8,7 +8,7 @@ class PubSub {
     }
 
     async init() {
-        await Promise.all([
+        return Promise.all([
             this.subscriber.connect(),
             this.publisher.connect(),
         ]);
