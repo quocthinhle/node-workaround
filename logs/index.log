@@ -1,0 +1,2 @@
+error: Jul-12-2022 09:44:26: Cannot bootstrap application
+error: Jul-12-2022 09:45:17: Cannot bootstrap application: connect ECONNREFUSED 127.0.0.1:6379
