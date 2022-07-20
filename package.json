@@ -6,6 +6,7 @@
     "start": "node index"
   },
   "dependencies": {
+    "@socket.io/redis-adapter": "^7.2.0",
     "cookie-parser": "~1.4.4",
     "debug": "~2.6.9",
     "dotenv": "^16.0.1",
@@ -14,6 +15,7 @@
     "jade": "~1.11.0",
     "morgan": "~1.9.1",
     "redis": "^4.2.0",
+    "socket.io": "^4.5.1",
     "winston": "^3.8.1"
   }
 }
