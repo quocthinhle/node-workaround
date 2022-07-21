@@ -6,5 +6,5 @@ module.exports = {
         handler: (message) => {
             console.log(`Receive new event: ${message}`);
         },
-    }
+    },
 }

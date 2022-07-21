@@ -1,17 +1,16 @@
-const { getRedisConnection } = require('../utils/redis-connect');
+const { getRedisClient } = require('../configs/redis');
 
 class PubSub {
     constructor() {
-        this.publisher = getRedisConnection();
-        this.subscriber = getRedisConnection();
+        this.publisher = {};
+        this.subscriber = {};
         this.eventHandler = {};
     }
 
     async init() {
-        return Promise.all([
-            this.subscriber.connect(),
-            this.publisher.connect(),
-        ]);
+        const { publisher, subscriber } = await getRedisClient(true);
+        this.publisher = publisher;
+        this.subscriber = subscriber;
     }
 
     publish(event, data) {
@@ -32,7 +31,8 @@ class PubSub {
         });
     }
 
-    registerSubscriber(event, handler) {
+    registerSubscriber(data) {
+        const { event, handler } = data;
         if (! this.eventHandler[event]) {
             this.eventHandler[event] = [];
         }

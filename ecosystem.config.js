@@ -1,6 +1,6 @@
 module.exports = {
   apps : [{
-    script: 'bin/www',
+    script: "index.js",
     instances: "4",
     exec_mode: "cluster"
   }],
