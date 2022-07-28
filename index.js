@@ -1,6 +1,5 @@
 require('dotenv').config();
 const logger = require('./helpers/loggers');
-const app = require('./http-server');
 const { runPubSub } = require('./pubsub');
 const { connectRedis } = require('./configs/redis');
 
@@ -9,6 +8,7 @@ const PORT = process.env.PORT || 3000;
 const main = async () => {
     await connectRedis();
     await runPubSub();
+    const app = require('./http-server');
     app.listen(PORT, () => logger.info(`Server is listening on ${PORT}`));
 }
 

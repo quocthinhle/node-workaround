@@ -7,8 +7,8 @@ class PubSub {
         this.eventHandler = {};
     }
 
-    async init() {
-        const { publisher, subscriber } = await getRedisClient(true);
+    init() {
+        const { publisher, subscriber } = getRedisClient(true);
         this.publisher = publisher;
         this.subscriber = subscriber;
     }

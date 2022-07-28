@@ -43,10 +43,7 @@ const connectRedis = async () => {
     }
 };
 
-const getRedisClient = async (getSubscriber = false) => {
-    if (!isExecuted) {
-        await connectRedis();
-    }
+const getRedisClient = (getSubscriber = false) => {
     if (getSubscriber) {
         return { publisher, subscriber };
     }
