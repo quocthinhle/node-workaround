@@ -8,3 +8,35 @@ error: Jul-20-2022 16:48:45: Error handling setex: OK
 error: Jul-20-2022 16:48:45: Error handling setex: OK
 error: Jul-20-2022 16:48:45: Error handling setex: OK
 error: Jul-20-2022 16:48:45: Error handling setex: OK
+error: Jul-28-2022 20:17:54: Redis connection error:  connect ECONNREFUSED 127.0.0.1:6379
+error: Jul-28-2022 20:17:54: Redis connection error:  connect ECONNREFUSED 127.0.0.1:6379
+error: Jul-28-2022 20:17:54: Redis connection error:  connect ECONNREFUSED 127.0.0.1:6379
+error: Jul-28-2022 20:17:54: Redis connection error:  connect ECONNREFUSED 127.0.0.1:6379
+error: Jul-28-2022 20:17:54: Redis connection error:  connect ECONNREFUSED 127.0.0.1:6379
+error: Jul-28-2022 20:17:54: Redis connection error:  connect ECONNREFUSED 127.0.0.1:6379
+error: Jul-28-2022 20:17:54: Redis connection error:  connect ECONNREFUSED 127.0.0.1:6379
+error: Jul-28-2022 20:17:54: Redis connection error:  connect ECONNREFUSED 127.0.0.1:6379
+error: Jul-28-2022 20:17:55: Redis connection error:  connect ECONNREFUSED 127.0.0.1:6379
+error: Jul-28-2022 20:17:55: Redis connection error:  connect ECONNREFUSED 127.0.0.1:6379
+error: Jul-28-2022 20:17:55: Redis connection error:  connect ECONNREFUSED 127.0.0.1:6379
+error: Jul-28-2022 20:17:55: Redis connection error:  connect ECONNREFUSED 127.0.0.1:6379
+error: Jul-28-2022 20:17:55: Redis connection error:  connect ECONNREFUSED 127.0.0.1:6379
+error: Jul-28-2022 20:17:55: Redis connection error:  connect ECONNREFUSED 127.0.0.1:6379
+error: Jul-28-2022 20:17:55: Redis connection error:  connect ECONNREFUSED 127.0.0.1:6379
+error: Jul-28-2022 20:17:55: Redis connection error:  connect ECONNREFUSED 127.0.0.1:6379
+error: Jul-28-2022 20:17:56: Redis connection error:  connect ECONNREFUSED 127.0.0.1:6379
+error: Jul-28-2022 20:17:56: Redis connection error:  connect ECONNREFUSED 127.0.0.1:6379
+error: Jul-28-2022 20:18:41: Redis connection error:  connect ECONNREFUSED 127.0.0.1:6379
+error: Jul-28-2022 20:18:41: Redis connection error:  connect ECONNREFUSED 127.0.0.1:6379
+error: Jul-28-2022 20:18:41: Redis connection error:  connect ECONNREFUSED 127.0.0.1:6379
+error: Jul-28-2022 20:18:41: Redis connection error:  connect ECONNREFUSED 127.0.0.1:6379
+error: Jul-28-2022 20:18:41: Redis connection error:  connect ECONNREFUSED 127.0.0.1:6379
+error: Jul-28-2022 20:18:41: Redis connection error:  connect ECONNREFUSED 127.0.0.1:6379
+error: Jul-28-2022 20:18:41: Redis connection error:  connect ECONNREFUSED 127.0.0.1:6379
+error: Jul-28-2022 20:18:41: Redis connection error:  connect ECONNREFUSED 127.0.0.1:6379
+error: Jul-28-2022 20:18:41: Redis connection error:  connect ECONNREFUSED 127.0.0.1:6379
+error: Jul-28-2022 20:18:41: Redis connection error:  connect ECONNREFUSED 127.0.0.1:6379
+error: Jul-28-2022 20:18:42: Redis connection error:  connect ECONNREFUSED 127.0.0.1:6379
+error: Jul-28-2022 20:18:42: Redis connection error:  connect ECONNREFUSED 127.0.0.1:6379
+error: Jul-28-2022 20:18:42: Redis connection error:  connect ECONNREFUSED 127.0.0.1:6379
+error: Jul-28-2022 20:18:42: Redis connection error:  connect ECONNREFUSED 127.0.0.1:6379
