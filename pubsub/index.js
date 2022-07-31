@@ -1,10 +1,18 @@
-const { Notification } = require('./event-handlers/console-log');
+const logger = require('../helpers/loggers');
+const Events = require('./event-handlers');
 const pubsub = require('./pub-sub');
 
 module.exports = {
     runPubSub: async () => {
-        await pubsub.init();
-        pubsub.registerSubscriber(Notification.event, Notification.handler);
-        return Promise.all(pubsub.executePubsub());
+        try {
+            pubsub.init();
+            Object.values(Events).forEach(event => {
+                pubsub.registerSubscriber(event);
+            });
+            await Promise.all(pubsub.executePubsub());
+        } catch (err) {
+            logger.error(err);
+            throw err;
+        }
     }
 }
