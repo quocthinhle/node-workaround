@@ -3,6 +3,6 @@ module.exports = {
         EVENT: {
             NOTIFICATION: 'notification',
             SETEX: 'setex',
-        }
-    }
-}
+        },
+    },
+};

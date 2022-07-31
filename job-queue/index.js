@@ -1,12 +1,20 @@
+const { createBullBoard } = require('bull-board');
+const { BullAdapter } = require('bull-board/bullAdapter');
 const { JobQueue } = require('./queue');
+const { emailHandler } = require('./consumer/email-processing');
 
-const firstQueue = new JobQueue('taylor-swift', 1);
-const secondQueue = new JobQueue('adele', 5);
+const emailSenderQueue = new JobQueue('mail-queue', 2);
 
-function setup() {
-    
-}
+const { router } = createBullBoard([
+    new BullAdapter(emailSenderQueue.getQueue()),
+]);
+
+const setupWorker = async () => {
+    await emailSenderQueue.addConsumer(emailHandler);
+};
 
 module.exports = {
-    
-}
+    setupWorker,
+    emailSenderQueue,
+    adminQueueRouter: router,
+};

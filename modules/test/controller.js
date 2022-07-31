@@ -2,6 +2,8 @@ const status = require('http-status');
 const logger = require('../../helpers/loggers');
 const { controllerMethod } = require('../../commons/base/controller');
 const { setToRedis } = require('../../utils/redis.util');
+const { emailHandler } = require('../../job-queue/consumer/email-processing');
+const { emailSenderQueue } = require('../../job-queue');
 
 class TestController {
     testNewErrorHandlingStyle(req, res, next) {
@@ -31,7 +33,7 @@ class TestController {
         controllerMethod(req, res, next)(async () => {
             const { delay } = req.body;
             const now = Date.now();
-            while (true) {
+            for (;;) {
                 if (Date.now() - now > delay) {
                     break;
                 }
@@ -43,6 +45,46 @@ class TestController {
     healthCheck(req, res, next) {
         controllerMethod(req, res, next)(async () => {
             logger.info('Healthcheck !!');
+            return res.response(status.OK, {});
+        });
+    }
+
+    sendEmailDirectly(req, res, next) {
+        controllerMethod(req, res, next)(async () => {
+            const {
+                to,
+                text,
+                html,
+                subject,
+            } = req.body;
+
+            emailHandler({
+                data: {
+                    to,
+                    text,
+                    html,
+                    subject,
+                },
+            }, (() => res.response(status.OK, {})));
+        });
+    }
+
+    addJobSendEmail(req, res, next) {
+        controllerMethod(req, res, next)(async () => {
+            const {
+                to,
+                text,
+                html,
+                subject,
+            } = req.body;
+
+            await emailSenderQueue.provide({
+                to,
+                text,
+                html,
+                subject,
+            });
+
             return res.response(status.OK, {});
         });
     }
