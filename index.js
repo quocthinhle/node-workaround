@@ -1,24 +1,16 @@
 require('dotenv').config();
 const logger = require('./helpers/loggers');
+const { connectRedis, setupRabbit } = require('./configs');
 const { runPubSub } = require('./pubsub');
-const { connectRedis } = require('./configs/redis');
-const { setupWorker } = require('./job-queue/index');
+const app = require('./http-server');
 
 const PORT = process.env.PORT || 3000;
 
 const main = async () => {
-    const mode = process.env.MODE;
-    if (mode === 'HTTP-SERVER') {
-        await connectRedis();
-        await runPubSub();
-        // eslint-disable-next-line global-require
-        const app = require('./http-server');
-        app.listen(PORT, () => logger.info(`Server is listening on ${PORT}`));
-    }
-
-    if (mode === 'WORKER') {
-        await setupWorker();
-    }
+    await setupRabbit('http-server');
+    await connectRedis();
+    await runPubSub();
+    app.listen(PORT, () => logger.info(`Server is listening on ${PORT}`));
 };
 
 main().catch((err) => {

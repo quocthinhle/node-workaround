@@ -1,5 +1,5 @@
 const Queue = require('bull');
-const logger = require('../helpers/loggers');
+const logger = require('../../helpers/loggers');
 
 class JobQueue {
     constructor(name, concurrency) {
@@ -21,24 +21,24 @@ class JobQueue {
     }
 
     addConsumer(handler) {
-        console.log(this.concurrency, handler);
         return this.queue.process(this.concurrency, handler);
     }
 
     initEvent() {
         this.queue
-            .on('completed', function (job, _) {
+            // eslint-disable-next-line no-unused-vars
+            .on('completed', (job, _) => {
                 logger.info(`INFO: ${this.name.toUpperCase()}: ${job.id} sent successfully`);
             })
-            .on('error', function (error) {
+            .on('error', (error) => {
                 error.message = `ERROR: ${this.name.toUpperCase()}: ${error.message}`;
                 logger.error(error);
             })
-            .on('stalled', function (job) {
+            .on('stalled', (job) => {
                 const error = new Error(`ERROR STALLED JOB IVR: ${this.name.toUpperCase()} - ${job.id}`);
                 logger.error(error);
             })
-            .on('lock-extension-failed', function (job, err) {
+            .on('lock-extension-failed', (job, err) => {
                 err.message = `ERROR REDIS JOB IVR: ${this.name.toUpperCase()}: ${err.message}`;
                 logger.error(err);
             });

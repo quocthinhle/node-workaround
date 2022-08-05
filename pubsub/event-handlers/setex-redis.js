@@ -1,4 +1,4 @@
-const { getRedisClient } = require('../../configs/redis');
+const { getRedisClient } = require('../../configs/redis-config');
 const { REDIS_KEY } = require('../../commons/constants');
 const logger = require('../../helpers/loggers');
 

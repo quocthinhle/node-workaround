@@ -72,3 +72,137 @@ error: Jul-31-2022 15:06:31: Invalid login: 535-5.7.8 Username and Password not 
 535 5.7.8  https://support.google.com/mail/?p=BadCredentials k4-20020aa79984000000b00528c22038f5sm6191949pfh.14 - gsmtp
 error: Jul-31-2022 15:12:38: No recipients defined
 error: Jul-31-2022 15:22:29: Cannot bootstrap application: Route.post() requires a callback function but got a [object Undefined]
+error: Aug-01-2022 21:39:46: Unexpected token u in JSON at position 0
+error: Aug-01-2022 21:40:04: Unexpected token o in JSON at position 1
+error: Aug-01-2022 21:40:06: Unexpected token o in JSON at position 1
+error: Aug-02-2022 00:43:41: Redis connection error:  Socket closed unexpectedly
+error: Aug-02-2022 00:43:41: Redis connection error:  Socket closed unexpectedly
+error: Aug-02-2022 00:43:41: Redis connection error:  connect ECONNREFUSED 127.0.0.1:6379
+error: Aug-02-2022 00:43:41: ERROR: MAIL-QUEUE: connect ECONNREFUSED 127.0.0.1:6379
+error: Aug-02-2022 00:43:41: Redis connection error:  connect ECONNREFUSED 127.0.0.1:6379
+error: Aug-02-2022 00:43:41: Redis connection error:  connect ECONNREFUSED 127.0.0.1:6379
+error: Aug-02-2022 00:43:41: Redis connection error:  connect ECONNREFUSED 127.0.0.1:6379
+error: Aug-02-2022 00:43:41: ERROR: MAIL-QUEUE: connect ECONNREFUSED 127.0.0.1:6379
+error: Aug-02-2022 00:43:41: ERROR: MAIL-QUEUE: connect ECONNREFUSED 127.0.0.1:6379
+error: Aug-02-2022 00:43:41: Redis connection error:  connect ECONNREFUSED 127.0.0.1:6379
+error: Aug-02-2022 00:43:41: ERROR: MAIL-QUEUE: connect ECONNREFUSED 127.0.0.1:6379
+error: Aug-02-2022 00:43:41: Redis connection error:  connect ECONNREFUSED 127.0.0.1:6379
+error: Aug-02-2022 00:43:41: Redis connection error:  connect ECONNREFUSED 127.0.0.1:6379
+error: Aug-02-2022 00:43:41: ERROR: MAIL-QUEUE: connect ECONNREFUSED 127.0.0.1:6379
+error: Aug-02-2022 00:43:41: Redis connection error:  connect ECONNREFUSED 127.0.0.1:6379
+error: Aug-02-2022 00:43:41: Redis connection error:  connect ECONNREFUSED 127.0.0.1:6379
+error: Aug-02-2022 00:43:41: Redis connection error:  connect ECONNREFUSED 127.0.0.1:6379
+error: Aug-05-2022 08:52:17: Redis connection error:  connect ECONNREFUSED 127.0.0.1:6379
+error: Aug-05-2022 08:52:17: Redis connection error:  connect ECONNREFUSED 127.0.0.1:6379
+error: Aug-05-2022 08:52:17: ERROR: MAIL-QUEUE: connect ECONNREFUSED 127.0.0.1:6379
+error: Aug-05-2022 08:52:17: ERROR: ERROR-QUEUE: connect ECONNREFUSED 127.0.0.1:6379
+error: Aug-05-2022 08:52:17: Redis connection error:  connect ECONNREFUSED 127.0.0.1:6379
+error: Aug-05-2022 08:52:17: Redis connection error:  connect ECONNREFUSED 127.0.0.1:6379
+error: Aug-05-2022 08:52:17: ERROR: ERROR-QUEUE: connect ECONNREFUSED 127.0.0.1:6379
+error: Aug-05-2022 08:52:17: ERROR: MAIL-QUEUE: connect ECONNREFUSED 127.0.0.1:6379
+error: Aug-05-2022 08:52:17: ERROR: MAIL-QUEUE: connect ECONNREFUSED 127.0.0.1:6379
+error: Aug-05-2022 08:52:17: ERROR: ERROR-QUEUE: connect ECONNREFUSED 127.0.0.1:6379
+error: Aug-05-2022 08:52:17: ERROR: ERROR-QUEUE: connect ECONNREFUSED 127.0.0.1:6379
+error: Aug-05-2022 08:52:17: ERROR: MAIL-QUEUE: connect ECONNREFUSED 127.0.0.1:6379
+error: Aug-05-2022 08:52:17: Redis connection error:  connect ECONNREFUSED 127.0.0.1:6379
+error: Aug-05-2022 08:52:17: Redis connection error:  connect ECONNREFUSED 127.0.0.1:6379
+error: Aug-05-2022 08:52:17: ERROR: MAIL-QUEUE: connect ECONNREFUSED 127.0.0.1:6379
+error: Aug-05-2022 08:52:17: ERROR: ERROR-QUEUE: connect ECONNREFUSED 127.0.0.1:6379
+error: Aug-05-2022 08:52:18: Redis connection error:  connect ECONNREFUSED 127.0.0.1:6379
+error: Aug-05-2022 08:52:18: Redis connection error:  connect ECONNREFUSED 127.0.0.1:6379
+error: Aug-05-2022 08:52:18: ERROR: ERROR-QUEUE: connect ECONNREFUSED 127.0.0.1:6379
+error: Aug-05-2022 08:52:18: ERROR: MAIL-QUEUE: connect ECONNREFUSED 127.0.0.1:6379
+error: Aug-05-2022 08:52:18: Redis connection error:  connect ECONNREFUSED 127.0.0.1:6379
+error: Aug-05-2022 08:52:18: Redis connection error:  connect ECONNREFUSED 127.0.0.1:6379
+error: Aug-05-2022 08:52:18: Redis connection error:  connect ECONNREFUSED 127.0.0.1:6379
+error: Aug-05-2022 08:52:18: Redis connection error:  connect ECONNREFUSED 127.0.0.1:6379
+error: Aug-05-2022 08:52:18: ERROR: MAIL-QUEUE: connect ECONNREFUSED 127.0.0.1:6379
+error: Aug-05-2022 08:52:18: ERROR: ERROR-QUEUE: connect ECONNREFUSED 127.0.0.1:6379
+error: Aug-05-2022 08:52:18: Redis connection error:  connect ECONNREFUSED 127.0.0.1:6379
+error: Aug-05-2022 08:52:18: Redis connection error:  connect ECONNREFUSED 127.0.0.1:6379
+error: Aug-05-2022 08:52:18: Redis connection error:  connect ECONNREFUSED 127.0.0.1:6379
+error: Aug-05-2022 08:52:18: Redis connection error:  connect ECONNREFUSED 127.0.0.1:6379
+error: Aug-05-2022 08:52:19: Redis connection error:  connect ECONNREFUSED 127.0.0.1:6379
+error: Aug-05-2022 08:52:19: Redis connection error:  connect ECONNREFUSED 127.0.0.1:6379
+error: Aug-05-2022 08:52:19: ERROR: MAIL-QUEUE: connect ECONNREFUSED 127.0.0.1:6379
+error: Aug-05-2022 08:52:19: ERROR: ERROR-QUEUE: connect ECONNREFUSED 127.0.0.1:6379
+error: Aug-05-2022 16:08:33: connect ECONNREFUSED 127.0.0.1:5672
+error: Aug-05-2022 16:08:47: connect ECONNREFUSED 127.0.0.1:5672
+error: Aug-05-2022 16:39:07: Handshake terminated by server: 403 (ACCESS-REFUSED) with message "ACCESS_REFUSED - Login was refused using authentication mechanism PLAIN. For details see the broker logfile."
+error: Aug-05-2022 16:48:06: Cannot bootstrap application: Cannot read properties of undefined (reading 'consume')
+error: Aug-05-2022 16:51:27: Cannot bootstrap application: Cannot read properties of undefined (reading 'createChannel')
+error: Aug-05-2022 16:53:00: Cannot bootstrap application: Cannot read properties of undefined (reading 'createChannel')
+error: Aug-05-2022 16:54:13: Cannot bootstrap application: Cannot read properties of undefined (reading 'createChannel')
+error: Aug-05-2022 16:55:56: Cannot bootstrap application: Cannot read properties of undefined (reading 'createChannel')
+error: Aug-05-2022 16:58:39: Cannot bootstrap application: Cannot read properties of undefined (reading 'createChannel')
+error: Aug-05-2022 16:59:22: Cannot bootstrap application: Cannot read properties of undefined (reading 'createChannel')
+error: Aug-05-2022 17:00:57: Cannot bootstrap application: Cannot read properties of undefined (reading 'createChannel')
+error: Aug-05-2022 17:03:44: Cannot bootstrap application: Cannot read properties of undefined (reading 'createChannel')
+error: Aug-05-2022 17:05:16: Cannot bootstrap application: Cannot read properties of undefined (reading 'createChannel')
+error: Aug-05-2022 17:05:35: Cannot bootstrap application: Cannot read properties of undefined (reading 'createChannel')
+error: Aug-05-2022 17:07:29: Cannot bootstrap application: Cannot read properties of undefined (reading 'createChannel')
+error: Aug-05-2022 17:08:35: Cannot bootstrap application: Cannot read properties of undefined (reading 'createChannel')
+error: Aug-05-2022 17:09:11: Cannot bootstrap application: Cannot read properties of undefined (reading 'createChannel')
+error: Aug-05-2022 17:10:46: Cannot bootstrap application: Cannot read properties of undefined (reading 'createChannel')
+error: Aug-05-2022 17:11:27: Cannot bootstrap application: Cannot read properties of undefined (reading 'createChannel')
+error: Aug-05-2022 17:11:43: Cannot bootstrap application: Cannot read properties of undefined (reading 'createChannel')
+error: Aug-06-2022 00:19:14: connect ECONNREFUSED 127.0.0.1:5672
+error: Aug-06-2022 10:16:01: Cannot bootstrap application: setupRabbitQueue is not a function
+error: Aug-06-2022 10:16:19: Cannot bootstrap application: setupRabbitQueue is not a function
+error: Aug-06-2022 19:17:13: ERROR: MAIL-QUEUE: connect ECONNREFUSED 127.0.0.1:6379
+error: Aug-06-2022 19:17:13: ERROR: ERROR-QUEUE: connect ECONNREFUSED 127.0.0.1:6379
+error: Aug-06-2022 19:17:13: ERROR: ERROR-QUEUE: connect ECONNREFUSED 127.0.0.1:6379
+error: Aug-06-2022 19:17:13: ERROR: MAIL-QUEUE: connect ECONNREFUSED 127.0.0.1:6379
+error: Aug-06-2022 19:17:13: Redis connection error:  connect ECONNREFUSED 127.0.0.1:6379
+error: Aug-06-2022 19:17:13: Redis connection error:  connect ECONNREFUSED 127.0.0.1:6379
+error: Aug-06-2022 19:17:13: ERROR: MAIL-QUEUE: connect ECONNREFUSED 127.0.0.1:6379
+error: Aug-06-2022 19:17:13: ERROR: ERROR-QUEUE: connect ECONNREFUSED 127.0.0.1:6379
+error: Aug-06-2022 19:17:13: Redis connection error:  connect ECONNREFUSED 127.0.0.1:6379
+error: Aug-06-2022 19:17:13: Redis connection error:  connect ECONNREFUSED 127.0.0.1:6379
+error: Aug-06-2022 19:17:13: ERROR: ERROR-QUEUE: connect ECONNREFUSED 127.0.0.1:6379
+error: Aug-06-2022 19:17:13: ERROR: MAIL-QUEUE: connect ECONNREFUSED 127.0.0.1:6379
+error: Aug-06-2022 19:17:13: Redis connection error:  connect ECONNREFUSED 127.0.0.1:6379
+error: Aug-06-2022 19:17:13: Redis connection error:  connect ECONNREFUSED 127.0.0.1:6379
+error: Aug-06-2022 19:17:13: ERROR: MAIL-QUEUE: connect ECONNREFUSED 127.0.0.1:6379
+error: Aug-06-2022 19:17:13: ERROR: ERROR-QUEUE: connect ECONNREFUSED 127.0.0.1:6379
+error: Aug-06-2022 19:17:13: Redis connection error:  connect ECONNREFUSED 127.0.0.1:6379
+error: Aug-06-2022 19:17:13: Redis connection error:  connect ECONNREFUSED 127.0.0.1:6379
+error: Aug-06-2022 19:17:13: ERROR: ERROR-QUEUE: connect ECONNREFUSED 127.0.0.1:6379
+error: Aug-06-2022 19:17:13: ERROR: MAIL-QUEUE: connect ECONNREFUSED 127.0.0.1:6379
+error: Aug-06-2022 19:17:14: Redis connection error:  connect ECONNREFUSED 127.0.0.1:6379
+error: Aug-06-2022 19:17:14: Redis connection error:  connect ECONNREFUSED 127.0.0.1:6379
+error: Aug-06-2022 19:17:14: Redis connection error:  connect ECONNREFUSED 127.0.0.1:6379
+error: Aug-06-2022 19:17:14: Redis connection error:  connect ECONNREFUSED 127.0.0.1:6379
+error: Aug-06-2022 19:17:14: ERROR: ERROR-QUEUE: connect ECONNREFUSED 127.0.0.1:6379
+error: Aug-06-2022 19:17:14: ERROR: MAIL-QUEUE: connect ECONNREFUSED 127.0.0.1:6379
+error: Aug-06-2022 19:17:14: Redis connection error:  connect ECONNREFUSED 127.0.0.1:6379
+error: Aug-06-2022 19:17:14: Redis connection error:  connect ECONNREFUSED 127.0.0.1:6379
+error: Aug-06-2022 19:17:14: Redis connection error:  connect ECONNREFUSED 127.0.0.1:6379
+error: Aug-06-2022 19:17:14: Redis connection error:  connect ECONNREFUSED 127.0.0.1:6379
+error: Aug-06-2022 19:17:15: Redis connection error:  connect ECONNREFUSED 127.0.0.1:6379
+error: Aug-06-2022 19:17:15: Redis connection error:  connect ECONNREFUSED 127.0.0.1:6379
+error: Aug-06-2022 19:17:15: ERROR: ERROR-QUEUE: connect ECONNREFUSED 127.0.0.1:6379
+error: Aug-06-2022 19:17:15: ERROR: MAIL-QUEUE: connect ECONNREFUSED 127.0.0.1:6379
+error: Aug-06-2022 19:17:15: Redis connection error:  connect ECONNREFUSED 127.0.0.1:6379
+error: Aug-06-2022 19:17:15: Redis connection error:  connect ECONNREFUSED 127.0.0.1:6379
+error: Aug-06-2022 19:17:15: Redis connection error:  connect ECONNREFUSED 127.0.0.1:6379
+error: Aug-06-2022 19:17:16: Redis connection error:  connect ECONNREFUSED 127.0.0.1:6379
+error: Aug-06-2022 19:17:16: Redis connection error:  connect ECONNREFUSED 127.0.0.1:6379
+error: Aug-06-2022 19:17:16: Redis connection error:  connect ECONNREFUSED 127.0.0.1:6379
+error: Aug-06-2022 19:17:17: Redis connection error:  connect ECONNREFUSED 127.0.0.1:6379
+error: Aug-06-2022 19:17:17: Redis connection error:  connect ECONNREFUSED 127.0.0.1:6379
+error: Aug-06-2022 19:17:17: Redis connection error:  connect ECONNREFUSED 127.0.0.1:6379
+error: Aug-06-2022 19:17:17: Redis connection error:  connect ECONNREFUSED 127.0.0.1:6379
+error: Aug-06-2022 19:17:44: Cannot read properties of undefined (reading 'provide')
+error: Aug-07-2022 14:35:35: Error Rabbit connection
+error: Aug-07-2022 14:35:35: Close Rabbit connection
+error: Aug-07-2022 14:36:35: Error Rabbit connection
+error: Aug-07-2022 14:36:35: Close Rabbit connection
+error: Aug-07-2022 14:38:33: Error Rabbit connection
+error: Aug-07-2022 14:38:33: Close Rabbit connection
+error: Aug-07-2022 14:39:33: Error Rabbit connection
+error: Aug-07-2022 14:39:33: Close Rabbit connection
+error: Aug-07-2022 14:40:32: Error Rabbit connection
+error: Aug-07-2022 14:40:32: Close Rabbit connection
+error: Aug-07-2022 14:41:32: Error Rabbit connection
+error: Aug-07-2022 14:41:32: Close Rabbit connection

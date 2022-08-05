@@ -4,11 +4,15 @@
   "private": true,
   "scripts": {
     "start": "node index",
-    "start-server": "MODE=HTTP-SERVER node index",
-    "start-worker": "MODE=WORKER node index"
+    "start-server": "MODE=http-server node index",
+    "start-bull-worker": "MODE=bull-worker node index",
+    "start-rabbit-worker": "MODE=rabbit-worker node index"
   },
   "dependencies": {
     "@socket.io/redis-adapter": "^7.2.0",
+    "amqplib": "^0.10.1",
+    "axios": "^0.27.2",
+    "benchmark": "^2.1.4",
     "bull": "^4.8.5",
     "bull-board": "^2.1.3",
     "cookie-parser": "~1.4.4",
@@ -21,6 +25,7 @@
     "morgan": "~1.9.1",
     "nodemailer": "^6.7.7",
     "redis": "^4.2.0",
+    "sharp": "^0.30.7",
     "socket.io": "^4.5.1",
     "winston": "^3.8.1"
   },

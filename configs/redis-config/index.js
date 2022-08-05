@@ -1,6 +1,6 @@
 const { createClient } = require('redis');
 
-const logger = require('../helpers/loggers');
+const logger = require('../../helpers/loggers');
 
 let isExecuted = false;
 let publisher;
@@ -19,24 +19,23 @@ const connectRedis = async () => {
             username: process.env.REDIS_USER,
             password: process.env.REDIS_PASS,
         });
-    
+
         subscriber = createClient({
             url: process.env.REDIS_HOST,
             username: process.env.REDIS_USER,
             password: process.env.REDIS_PASS,
         });
-    
+
         publisher.on('error', (err) => {
             logger.error('Redis connection error: ', err);
         });
-    
+
         subscriber.on('error', (err) => {
             logger.error('Redis connection error: ', err);
         });
-    
+
         await Promise.all([publisher.connect(), subscriber.connect()]);
         logger.info('Successfully connect Redis');
-
     } catch (err) {
         logger.error('Redis connections error');
         throw err;
@@ -48,9 +47,9 @@ const getRedisClient = (getSubscriber = false) => {
         return { publisher, subscriber };
     }
     return { publisher };
-}
+};
 
 module.exports = {
     getRedisClient,
-    connectRedis,  
-}
+    connectRedis,
+};

@@ -1,5 +1,5 @@
-const { transporter } = require('../../configs/email');
-const loggers = require('../../helpers/loggers');
+const { transporter } = require('../../../configs');
+const loggers = require('../../../helpers/loggers');
 
 const emailHandler = async (job, done) => {
     const {
@@ -8,8 +8,6 @@ const emailHandler = async (job, done) => {
         html,
         subject,
     } = job.data;
-
-    console.log(job.data);
 
     const mailOptions = {
         to,

@@ -1,5 +1,5 @@
 const testRouter = require('../../modules/test/index');
-const { adminQueueRouter } = require('../../job-queue/index');
+const { adminQueueRouter } = require('../../message-broker/bull-queue/index');
 
 module.exports = {
     configureRouting: (app) => {

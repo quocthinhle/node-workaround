@@ -6,7 +6,7 @@ module.exports = {
     runPubSub: async () => {
         try {
             pubsub.init();
-            Object.values(Events).forEach(event => {
+            Object.values(Events).forEach((event) => {
                 pubsub.registerSubscriber(event);
             });
             await Promise.all(pubsub.executePubsub());
@@ -14,5 +14,5 @@ module.exports = {
             logger.error(err);
             throw err;
         }
-    }
-}
+    },
+};

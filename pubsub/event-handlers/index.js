@@ -4,4 +4,4 @@ const { SetEx } = require('./setex-redis');
 module.exports = {
     Notification,
     SetEx,
-}
+};

@@ -1,4 +1,4 @@
-const { getRedisClient } = require('../configs/redis');
+const { getRedisClient } = require('../configs/redis-config');
 
 class PubSub {
     constructor() {
@@ -22,25 +22,25 @@ class PubSub {
             // TODO: Refactor this one
             this.publisher.publish(event, data, (error) => {
                 if (error) {
-                    return reject('ERROR_PUBLISHING');
+                    reject(new Error('ERROR_PUBLISHING'));
                 }
-                return resolve();
+                resolve();
             });
 
-            return resolve();
+            resolve();
         });
     }
 
     registerSubscriber(data) {
         const { event, handler } = data;
-        if (! this.eventHandler[event]) {
+        if (!this.eventHandler[event]) {
             this.eventHandler[event] = [];
         }
         this.eventHandler[event].push(handler);
     }
 
     executePubsub() {
-        return Object.keys(this.eventHandler).map(event => (
+        return Object.keys(this.eventHandler).map((event) => (
             this.subscriber.subscribe(event, (message) => {
                 let convertedData;
                 try {
@@ -49,7 +49,7 @@ class PubSub {
                     convertedData = message;
                 }
 
-                this.eventHandler[event].forEach(handler => {
+                this.eventHandler[event].forEach((handler) => {
                     handler(convertedData);
                 });
             })

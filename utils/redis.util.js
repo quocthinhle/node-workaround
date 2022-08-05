@@ -1,4 +1,4 @@
-const { getRedisClient } = require('../configs/redis');
+const { getRedisClient } = require('../configs/redis-config');
 const { publisher: client } = getRedisClient();
 
 const redisOperation = (promise) => {

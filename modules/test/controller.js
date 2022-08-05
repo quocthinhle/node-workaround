@@ -1,9 +1,11 @@
 const status = require('http-status');
+const pubsub = require('../../pubsub/pub-sub');
 const logger = require('../../helpers/loggers');
 const { controllerMethod } = require('../../commons/base/controller');
-const { setToRedis } = require('../../utils/redis.util');
-const { emailHandler } = require('../../job-queue/consumer/email-processing');
-const { emailSenderQueue } = require('../../job-queue');
+const { setToRedis, getFromRedis } = require('../../utils/redis.util');
+const { emailHandler } = require('../../message-broker/bull-queue/consumer/email-processing');
+const { emailSenderQueue, errorJobQueue, emailRabbitQueue } = require('../../message-broker/rabbit-queue/setup');
+const loggers = require('../../helpers/loggers');
 
 class TestController {
     testNewErrorHandlingStyle(req, res, next) {
@@ -14,6 +16,17 @@ class TestController {
                 return res.response(status[400], err.message);
             }
             return res.response(status.OK, data);
+        });
+    }
+
+    getRedis(req, res, next) {
+        controllerMethod(req, res, next)(async () => {
+            const { key } = req.query;
+            const [err, data] = await getFromRedis(key);
+            if (err) {
+                return res.response(status[400], err.message);
+            }
+            return res.response(status.OK, JSON.parse(data));
         });
     }
 
@@ -86,6 +99,39 @@ class TestController {
             });
 
             return res.response(status.OK, {});
+        });
+    }
+
+    retryJobOptions(req, res, next) {
+        controllerMethod(req, res, next)(async () => {
+            const { times, content, delay } = req.body;
+            await errorJobQueue.provide({ content }, {
+                backoff: delay,
+                attempts: times,
+            });
+            return res.response(status.OK, {
+                message: 'Add job success',
+            });
+        });
+    }
+
+    testRabbitCCU(req, res, next) {
+        controllerMethod(req, res, next)(async () => {
+            const { msg } = req.body;
+            await emailRabbitQueue.provide({ msg });
+            return res.response(status.OK, {
+                message: 'Add job success',
+            });
+        });
+    }
+
+    publish(req, res, next) {
+        controllerMethod(req, res, next)(async () => {
+            const { msg } = req.body;
+            await pubsub.publish('notification', msg).catch((err) => loggers.error(err));
+            return res.response(status.OK, {
+                message: 'Publish success',
+            });
         });
     }
 }
