@@ -7,7 +7,8 @@ const app = require('./http-server');
 const PORT = process.env.PORT || 3000;
 
 const main = async () => {
-    await setupRabbit('http-server');
+    // await setupRabbit('http-server');
+    await setupRabbit();
     await connectRedis();
     await runPubSub();
     app.listen(PORT, () => logger.info(`Server is listening on ${PORT}`));

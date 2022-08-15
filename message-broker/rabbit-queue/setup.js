@@ -8,8 +8,9 @@ const setupRabbitQueue = async (connection) => {
 
 const setUpRabbitMQConsumer = async () => {
     await Promise.all([
-        emailRabbitQueue.registerConsumer('mail-queue', async (data) => {
+        emailRabbitQueue.registerConsumer('mail-queue', async ({ sendAck, ...data }) => {
             console.log(data);
+            sendAck();
         }),
     ]);
 };

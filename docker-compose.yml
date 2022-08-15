@@ -12,4 +12,6 @@ services:
     build:
       context: .
       dockerfile: ./Dockefile
-      
+    environment:
+      - name=value
+    

@@ -12,6 +12,19 @@ const controllerMethod = (_req, res, next) => async (callback) => {
     }
 };
 
+function controllerMethodTheHardWay(req, res, next) {
+    return async function (callback) {
+        try {
+            res.response = responseSuccess(res);
+            return await callback();
+        } catch (error) {
+            logger.error(error);
+            return next(error);
+        }
+    };
+}
+
 module.exports = {
     controllerMethod,
+    controllerMethodTheHardWay,
 };

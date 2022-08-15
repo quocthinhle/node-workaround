@@ -2428,3 +2428,5 @@ error: Aug-07-2022 00:17:24: Error Rabbit connection
 error: Aug-07-2022 00:17:24: Close Rabbit connection
 error: Aug-07-2022 00:30:28: Error Rabbit connection
 error: Aug-07-2022 00:30:28: Close Rabbit connection
+error: Aug-08-2022 16:50:00: Error Rabbit connection, Channel closed by server: 406 (PRECONDITION-FAILED) with message "PRECONDITION_FAILED - delivery acknowledgement on channel 2 timed out. Timeout value used: 10000 ms. This timeout value can be configured, see consumers doc guide to learn more"
+error: Aug-08-2022 16:50:00: Close Rabbit connection, Channel closed by server: 406 (PRECONDITION-FAILED) with message "PRECONDITION_FAILED - delivery acknowledgement on channel 2 timed out. Timeout value used: 10000 ms. This timeout value can be configured, see consumers doc guide to learn more"

@@ -206,3 +206,11 @@ error: Aug-07-2022 14:40:32: Error Rabbit connection
 error: Aug-07-2022 14:40:32: Close Rabbit connection
 error: Aug-07-2022 14:41:32: Error Rabbit connection
 error: Aug-07-2022 14:41:32: Close Rabbit connection
+error: Aug-08-2022 11:56:21: connect ECONNREFUSED 127.0.0.1:5672
+error: Aug-08-2022 12:51:23: Close Rabbit connection, Connection closed: 320 (CONNECTION-FORCED) with message "CONNECTION_FORCED - broker forced connection closure with reason 'shutdown'"
+error: Aug-08-2022 12:51:23: Socket closed abruptly during opening handshake
+error: Aug-08-2022 16:51:23: Close Rabbit connection, Connection closed: 320 (CONNECTION-FORCED) with message "CONNECTION_FORCED - broker forced connection closure with reason 'shutdown'"
+error: Aug-08-2022 16:51:23: read ECONNRESET
+error: Aug-14-2022 08:58:20: Handshake terminated by server: 403 (ACCESS-REFUSED) with message "ACCESS_REFUSED - Login was refused using authentication mechanism PLAIN. For details see the broker logfile."
+error: Aug-15-2022 10:14:34: Cannot read properties of undefined (reading 'anotherFunction')
+error: Aug-15-2022 21:48:10: Cannot read properties of undefined (reading 'anotherFunction')

@@ -10,8 +10,18 @@ class RabbitMessageQueue {
      * @param {amqp.Connection} rabbitConnection
      */
     async init(rabbitConnection) {
+        this.rabbitConnection = rabbitConnection;
         this.channel = await rabbitConnection.createChannel();
         this.channel.prefetch(10);
+    }
+
+    async setPrefetch(prefetch) {
+        this.channel.close();
+        this.channel = await this.rabbitConnection.createChannel();
+        this.channel.prefetch(prefetch);
+        await this.registerConsumer('mail-queue', async (data) => {
+            console.log('Haha: ', data);
+        });
     }
 
     provide(data, routingKey) {
@@ -27,8 +37,8 @@ class RabbitMessageQueue {
             const { content } = msg;
             try {
                 const data = (Buffer.from(content)).toString();
-                await handler(data);
-                // this.channel.ack(msg);
+                const sendAck = () => this.channel.ack(msg);
+                await handler({ ...data, sendAck });
             } catch (error) {
                 loggers.error('Error handler: ', error);
             }

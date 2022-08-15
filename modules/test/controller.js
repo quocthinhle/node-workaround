@@ -1,11 +1,11 @@
 const status = require('http-status');
 const pubsub = require('../../pubsub/pub-sub');
 const logger = require('../../helpers/loggers');
+const loggers = require('../../helpers/loggers');
 const { controllerMethod } = require('../../commons/base/controller');
 const { setToRedis, getFromRedis } = require('../../utils/redis.util');
 const { emailHandler } = require('../../message-broker/bull-queue/consumer/email-processing');
 const { emailSenderQueue, errorJobQueue, emailRabbitQueue } = require('../../message-broker/rabbit-queue/setup');
-const loggers = require('../../helpers/loggers');
 
 class TestController {
     testNewErrorHandlingStyle(req, res, next) {
@@ -55,7 +55,14 @@ class TestController {
         });
     }
 
-    healthCheck(req, res, next) {
+    healthCheck = async (req, res, next) => {
+        controllerMethod(req, res, next)(async () => {
+            logger.info('Healthcheck !!');
+            return res.response(status.OK, {});
+        });
+    };
+
+    healthCheck1(req, res, next) {
         controllerMethod(req, res, next)(async () => {
             logger.info('Healthcheck !!');
             return res.response(status.OK, {});
@@ -134,8 +141,22 @@ class TestController {
             });
         });
     }
+
+    setPrefetch(req, res, next) {
+        controllerMethod(req, res, next)(async () => {
+            const { n } = req.body;
+            await emailRabbitQueue.setPrefetch(n);
+            return res.response(status.OK, {
+                message: 'Set prefetch success',
+            });
+        });
+    }
 }
 
 module.exports = {
     controller: new TestController(),
+    hehe: {
+        a: 'x',
+        b: 'y',
+    },
 };
