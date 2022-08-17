@@ -27,5 +27,8 @@ router.post('/retry-job', [], controller.retryJobOptions);
 router.post('/rabbit-ccu', [], controller.testRabbitCCU);
 router.post('/publish', [], controller.publish);
 router.post('/set-prefetch', [], controller.setPrefetch);
+router.post('/email', [], controller.testEmail.bind(controller));
 
 module.exports = router;
+
+// FifaOnl4

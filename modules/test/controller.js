@@ -8,6 +8,17 @@ const { emailHandler } = require('../../message-broker/bull-queue/consumer/email
 const { emailSenderQueue, errorJobQueue, emailRabbitQueue } = require('../../message-broker/rabbit-queue/setup');
 
 class TestController {
+    isValidEmailSafeRegex(email) {
+        const pattern = new RegExp(/^\S+@\S+\.\S+$/);
+        return pattern.test(email);
+    }
+
+    testEmail(req, res, next) {
+        const email = req.body.email;
+        const msg = this.isValidEmailSafeRegex(email);
+        return res.status(200).json({ message: msg });
+    }
+
     testNewErrorHandlingStyle(req, res, next) {
         controllerMethod(req, res, next)(async () => {
             const { key, value } = req.body;

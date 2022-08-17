@@ -4,7 +4,7 @@ const { connectRedis, setupRabbit } = require('./configs');
 const { runPubSub } = require('./pubsub');
 const app = require('./http-server');
 
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 3001;
 
 const main = async () => {
     // await setupRabbit('http-server');
