@@ -24,7 +24,10 @@ class AuthController {
     }
 
     async refreshToken(req, res) {
-        const { refreshtoken: refreshToken, accesstoken: accessToken } = req.headers;
+        const {
+            accesstoken: accessToken,
+            refreshtoken: refreshToken,
+        } = req.headers;
         const newAccessToken = await service.refreshAccessToken({
             currAccessToken: accessToken,
             currRefreshToken: refreshToken,
