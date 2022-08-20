@@ -3,10 +3,10 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "node index",
-    "start-server": "MODE=http-server node index",
-    "start-bull-worker": "MODE=bull-worker node index",
-    "start-rabbit-worker": "MODE=rabbit-worker node index"
+    "start": "node src/index",
+    "start-server": "MODE=http-server node ./src/index.js",
+    "start-bull-worker": "MODE=bull-worker node ./src/index.js",
+    "start-rabbit-worker": "MODE=rabbit-worker node ./src/index.js"
   },
   "dependencies": {
     "@socket.io/redis-adapter": "^7.2.0",
