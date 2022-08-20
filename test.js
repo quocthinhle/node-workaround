@@ -1,0 +1,4 @@
+const jwtHelper = require('./helpers/jsonwebtoken');
+
+const test = jwtHelper.verifyAccessToken("eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MmZlM2QyMzRmMzg5ZjNkOWYyZjU0NGMiLCJlbWFpbCI6InJvc2hhbjMyMS5sb2xAZ21haWwuY29tIiwidXNlcm5hbWUiOiJsZXF1b2N0aGluaDIiLCJpYXQiOjE2NjA4MzE1OTMsImV4cCI6MTY2MDgzMjE5MywiaXNzIjoibWUifQ.MMesvA4Ui_t3rW6ykFUmzW-1ApT6cFJuGZgdILdpuPk");
+console.log(test);

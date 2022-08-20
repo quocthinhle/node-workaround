@@ -5,4 +5,8 @@ module.exports = {
             SETEX: 'setex',
         },
     },
+    ActiveStatus: {
+        Active: 'active',
+        Inactive: 'inactive',
+    },
 };

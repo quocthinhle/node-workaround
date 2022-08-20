@@ -4,19 +4,12 @@ const logger = require('../../helpers/loggers');
 const loggers = require('../../helpers/loggers');
 const { controllerMethod } = require('../../commons/base/controller');
 const { setToRedis, getFromRedis } = require('../../utils/redis.util');
-const { emailHandler } = require('../../message-broker/bull-queue/consumer/email-processing');
+const { emailHandler, emailHandlerDirectly } = require('../../message-broker/bull-queue/consumer/email-processing');
 const { emailSenderQueue, errorJobQueue, emailRabbitQueue } = require('../../message-broker/rabbit-queue/setup');
 
 class TestController {
-    isValidEmailSafeRegex(email) {
-        const pattern = new RegExp(/^\S+@\S+\.\S+$/);
-        return pattern.test(email);
-    }
-
-    testEmail(req, res, next) {
-        const email = req.body.email;
-        const msg = this.isValidEmailSafeRegex(email);
-        return res.status(200).json({ message: msg });
+    pingRedis(req, res, next) {
+        return res.status(200).json({ message: 'pong' });
     }
 
     testNewErrorHandlingStyle(req, res, next) {
@@ -89,14 +82,41 @@ class TestController {
                 subject,
             } = req.body;
 
-            emailHandler({
+            const promises = []; 
+            for (let i = 0; i < 50; ++i) {
+                promises.push(emailHandlerDirectly({
+                    data: {
+                        to,
+                        text,
+                        html,
+                        subject,
+                    }
+                }));
+            }
+            await Promise.all(promises);
+            return res.response(status.OK, {});
+        });
+    }
+
+    send1EmailDirectly(req, res, next) {
+        controllerMethod(req, res, next)(async () => {
+            const {
+                to,
+                text,
+                html,
+                subject,
+            } = req.body;
+
+            await emailHandlerDirectly({
                 data: {
                     to,
                     text,
                     html,
                     subject,
-                },
-            }, (() => res.response(status.OK, {})));
+                }
+            });
+
+            return res.response(status.OK, {});
         });
     }
 
